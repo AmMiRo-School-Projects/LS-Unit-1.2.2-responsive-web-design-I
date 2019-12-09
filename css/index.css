@@ -252,6 +252,11 @@ header nav a:hover {
   margin-top: 7%;
   display: flex;
   justify-content: center;
+  max-width: 100%;
+}
+
+.services-top-img img {
+  max-width: 100%;
 }
 
 /* services title info */
@@ -309,12 +314,21 @@ header nav a:hover {
 
 .facts-text {
   width: 420px;
+  max-width: 48%;
 }
 
 .facts ul {
   list-style-type: square;
   margin: 4% 5%;
   line-height: 30px;
+}
+
+.services-info-img {
+  max-width: 48%;
+}
+
+.services-info-addaptive-img {
+  display: none;
 }
 
 /* product top photo */
@@ -338,7 +352,7 @@ header nav a:hover {
   text-align: center;
 }
 
-/* testimonials section */
+/* product testimonials section */
 
 .testimonials {
   border: 2px solid black;
@@ -377,7 +391,7 @@ footer {
 
 /* tablet view query */
 @media (max-width: 800px) {
-  /* header */
+  /* universal header */
   header nav {
     flex-wrap: wrap;
   }
@@ -393,7 +407,7 @@ footer {
     margin: 3% 0;
   }
 
-  /* title section */
+  /* index title section */
   .title-section {
     justify-content: center;
     padding: 0;
@@ -404,7 +418,7 @@ footer {
     display: none;
   }
 
-  /* middle section */
+  /* index middle section */
   .middle-img {
     width: 100%;
   }
@@ -412,11 +426,47 @@ footer {
   .middle-img img {
     width: 100%;
   }
+
+  /* services title section */
+  .services-title {
+    text-align: center;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  /* services facts sction */
+  .facts {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .facts-text {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .facts ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .services-info-img {
+    display: none;
+  }
+
+  .services-info-addaptive-img {
+    display: block;
+    max-width: 100%;
+  }
 }
 
 /* mobile vew query */
 @media (max-width: 500px) {
-  /* header */
+  /* universal header */
   header {
     margin: 3% 0;
   }
@@ -435,7 +485,7 @@ footer {
     padding: 3% 0;
   }
 
-  /* middle section */
+  /* index middle section */
   .info-1 {
     flex-wrap: wrap;
   }
@@ -452,5 +502,19 @@ footer {
   .info-2 div {
     width: 100%;
     margin: 3% 0;
+  }
+
+  /* services middle section */
+  .box {
+    width: 100%;
+  }
+
+  /* services facts section */
+  .facts ul {
+    flex-wrap: wrap;
+  }
+
+  .facts li {
+    width: 34%;
   }
 }
